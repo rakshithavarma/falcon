@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make Your Own Box</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    .card {
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center">Make Your Own Box</h1>
+    <div class="row mt-4">
+      <?php
+      // Replace 'x' with your desired integer values for the box descriptions
+      $integers = array(1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+      // Loop through the integers to create cards
+      foreach ($integers as $number) {
+      ?>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <!-- Replace 'your_image_url_here' with the URL of your image for each card -->
+            <img src="" class="card-img-top" alt="Box of <?php echo $number; ?>">
+            <div class="card-body">
+              <h5 class="card-title">Box of <?php echo $number; ?></h5>
+              <p class="card-text">Description for Box <?php echo $number; ?></p>
+            </div>
+          </div>
+        </div>
+      <?php
+      }
+      ?>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
